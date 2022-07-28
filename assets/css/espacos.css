@@ -1,0 +1,48 @@
+/*CSS PRODUTOS*/
+
+.espacos-h1{
+    color: #011b0cb0;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    font-size: 30px;
+
+}
+
+.espacos-class img{
+    margin-bottom: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.espacos-class h2{
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.espacos-class p{
+    font-size: 10px;
+}
+
+.espacos-class{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.espacos-class a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.espacos-class>div{
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+
+
