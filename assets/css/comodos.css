@@ -28,6 +28,8 @@ margin: 20px;
     width: 350px;
     height: 350px;
     margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
 }
 
 .flex1{

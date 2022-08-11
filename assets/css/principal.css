@@ -36,15 +36,13 @@
 
 
 
-
-
-
 .slider {
     margin: 0 auto;
     width: 1100px;
     height: 550px;
     overflow: hidden;
     box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
+    border-radius: 10px;
 }
 
 .slides {
@@ -155,6 +153,7 @@
 
 .flex img {
     box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
+    border-radius: 8px
 }
 
 h1 {
