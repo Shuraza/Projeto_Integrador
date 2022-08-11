@@ -58,6 +58,9 @@ include "head.php";
 
 <script src="assets/js/script.js"></script>
 
+
+
+
 <section class="flex">
     <div class="titulos">
         <h2>Prateleiras</h2>
@@ -76,20 +79,20 @@ include "head.php";
         <a href="exteriores.php"><img src="assets/img/cinza.jpg"></a>
     </div>
 
-    <div class="titulos1">
+    <div class="titulos">
         <h2>Industriais</h2>
         <a href="industriais.php"><img src="assets/img/cinza.jpg"></a>
     </div>
-    <div class="titulos1">
+    <div class="titulos">
         <h2>Escrivaninha</h2>
         <a href="escrivaninha.php"><img src="assets/img/cinza.jpg"></a>
     </div>
-    <div class="titulos1">
+    <div class="titulos">
         <h2>Molduras</h2>
         <a href="molduras.php"><img src="assets/img/cinza.jpg"></a>
     </div>
-    <div class="titulos1">
-        <h2>Araras</h2>
+    <div class="titulos">
+        <h2>Cabideiros</h2>
         <a href="araras.php"><img src="assets/img/cinza.jpg"></a>
     </div>
 </section>

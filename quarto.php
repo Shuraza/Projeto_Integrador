@@ -4,7 +4,7 @@ include "head.php"
 
 <img src="assets/img/cinza.jpg" class="img-cima">
 <div class="icone">
-    <img src="assets/img/dormitorio.png" alt="quarto">
+    <img src="assets/img/quarto.png" alt="quarto">
     <h1>DORMITÓRIO</h1>
 </div>
 <div class="flexbox">
