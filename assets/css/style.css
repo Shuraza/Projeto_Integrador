@@ -7,7 +7,7 @@
 }
 
 
-body{
+body {
     background-color: #dee4e0;
     min-height: 100vh;
     display: flex;
@@ -37,7 +37,7 @@ body{
     padding: 10px 0;
     display: flex;
     align-items: center;
-    
+
 }
 
 .sub-menu-1 ul li img {
@@ -52,12 +52,14 @@ nav {
     background-color: #011b0c;
     color: white;
     text-align: center;
+    box-shadow: 5px 5px 5px 5px #0d2718 solid;
 }
 
 
 nav ul {
     display: inline-flex;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -81,11 +83,9 @@ nav ul li:hover .sub-menu-1 {
     margin-top: 15px;
     margin-left: -38px;
     transition: 0.5s;
-    
+
 
 }
-
-
 
 nav ul li:hover .sub-menu-1 ul {
     display: block;
@@ -134,53 +134,61 @@ nav ul li:hover .sub-menu-1 ul li:hover {
     align-items: center;
 }
 
-
-.footer {
-    height: 200px auto;
-    background-color:#011b0c;
-    color: white;
-    font-size: 13px;
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-
-
-.footer2{
-    padding: 20px;
-    margin: 20px;
-    padding-right: 300px;
-
-}
-
-.footer1{
-    display: flex;
-    padding-right: 35px;
-}
-
-.footer3 {
-    padding-bottom: 15px;
-}
-
-.mapa {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.redesfooter {
-    display: flex;
-    list-style: none;
-    text-align: left;
-}
-
-.redesfooter ul li {
-    list-style: none;
-    text-align: left;
-}
-
-.redesfooter img {
+.boxs-icons img{
     width: 20px;
     margin-right: 5px;
 }
+
+footer .logo {
+    width: 130px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+footer {
+    width: 100%;
+    min-height: 250px;
+    background: #011b0c;
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+}
+
+footer .boxs {
+    width: 750px;
+    min-height: 150px;
+    padding: 20px;
+    margin-left: 95px;
+    margin-top: 15px;
+}
+
+footer .boxs:nth-child(2){
+    width: 400px;
+}
+
+.boxs p{
+    color: white;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.boxs ul li{
+    list-style: none;
+}
+
+@media(max-width:450px){
+    footer{
+        flex-direction: column;
+    }
+}
+
+
+.boxs-icons{
+    display: flex;
+}
+
+.boxs-icons img{
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
