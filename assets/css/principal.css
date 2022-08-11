@@ -12,10 +12,9 @@
     margin-bottom: 50px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
-    color: #346649;
 }
 
-.titulos {
+.titulos{
     text-align: center;
     padding-right: 10px;
     font-family: 'Raleway', sans-serif;
@@ -24,27 +23,44 @@
 }
 
 
-.titulos img {
-    width: 250px;
-    height: 300px;
+.titulos img{
+    width: 240px;
+    height: 340px;
+    padding-left: 10px;
 }
 
-.titulos h2 {
-    padding-top: 60px;
+.titulos h2{
+    padding-top: 130px;
+    padding-bottom: 20px;
+}
+
+.titulos1{
+    text-align: center;
+    padding-right: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 40px;
+
+}
+
+
+.titulos1 img{
+    width: 240px;
+    height: 340px;
+    padding-left: 10px;
+}
+
+.titulos1 h2{
+    padding-top: 40px;
     padding-bottom: 20px;
 }
 
 
 
-
-
-
 .slider {
     margin: 0 auto;
-    width: 1100px;
+    width: 1058px;
     height: 550px;
     overflow: hidden;
-    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
 }
 
 .slides {
@@ -63,21 +79,23 @@
 }
 
 .slide img {
-    width: 1100px;
+    width: 1058px;
 }
 
 .manual-navigation {
     position: absolute;
-    width: 1100px;
-    margin-top: 100px;
+    width: 1058px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
 }
 
 .manual-btn {
-
-
-    transition: 0.2s;
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .manual-btn:not(:last-child) {
@@ -105,14 +123,17 @@
 }
 
 .navigation-auto div {
-
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
     transition: 0.5s;
 }
 
 .navigation-auto {
     position: absolute;
-    width: 1100px;
-    margin-top: 500px;
+    width: 1058px;
+    margin-top: 480px;
     display: flex;
     justify-content: center;
 }
@@ -122,20 +143,21 @@
 }
 
 #radio1:checked~.navigation-auto .auto-btn1 {
-    background-color: #3d7c577a;
+    background-color: #fff;
 }
 
 #radio2:checked~.navigation-auto .auto-btn2 {
-    background-color: #3d7c577a;
+    background-color: #fff;
 }
 
 #radio3:checked~.navigation-auto .auto-btn3 {
-    background-color: #3d7c577a;
+    background-color: #fff;
 }
 
 #radio4:checked~.navigation-auto .auto-btn4 {
-    background-color: #3d7c577a;
+    background-color: #fff;
 }
+
 
 
 /*CSS FLEXBOX 1*/
@@ -149,14 +171,6 @@
 }
 
 .flex>div {
-    flex: auto;
-    margin: 0 auto;
-}
-
-.flex img {
-    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
-}
-
-h1 {
-    color: #011b0c
+    flex: 1 1 100px;
+    margin: 10px;
 }
