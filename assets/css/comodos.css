@@ -1,5 +1,10 @@
 /*CSS SALA*/
 
+.flexbox img{
+    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
+}
+
+
 .icone{
     text-align: center;
     margin-top: 100px;
@@ -25,16 +30,18 @@ margin: 20px;
 }
 
 .flex1 img{
-    width: 350px;
-    height: 350px;
-    margin-bottom: 10px;
+    width: 320px;
+    height: 320px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .flex1{
     display: flex;
     flex-wrap: wrap;
-    max-width: 1100px;
+    max-width: 990px;
     margin: 10px;
+
 }
 
 .flex1>div{
@@ -44,5 +51,25 @@ margin: 20px;
 .flexbox{
     display: flex;
    justify-content: center;
-   margin-bottom: 90px;
+}
+
+.botao{
+    text-align: center;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    border-radius: 25px;
+    background: #4f5c54a6;
+    border: none;
+    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
 }

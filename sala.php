@@ -4,7 +4,7 @@ include "head.php"
 
 
 
-<img src="assets/img/cinza.jpg" class="img-cima">
+<img src="assets/img/SALA1.jpeg" class="img-cima">
 <div class="icone">
     <img src="assets/img/sala.png" alt="sala">
     <h1>SALA</h1>
@@ -32,6 +32,9 @@ include "head.php"
     </section>
 </div>
 
+<div class="botao">
+    <button><a href="https://api.whatsapp.com/send?phone=554799255732">Solicite seu projeto</a></button>
+</div>
 
 <?php
 include "footer.php"

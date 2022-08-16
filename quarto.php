@@ -2,7 +2,7 @@
 include "head.php"
 ?>
 
-<img src="assets/img/cinza.jpg" class="img-cima">
+<img src="assets/img/quarto1.jpg" class="img-cima">
 <div class="icone">
     <img src="assets/img/quarto.png" alt="quarto">
     <h1>DORMITÓRIO</h1>
@@ -29,8 +29,9 @@ include "head.php"
         </div>
     </section>
 </div>
-
-
+<div class="botao">
+    <button><a href="https://api.whatsapp.com/send?phone=554799255732">Solicite seu projeto</a></button>
+</div>
 <?php
 include "footer.php"
 ?>
