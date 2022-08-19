@@ -6,6 +6,11 @@
     font-size: 15px;
 }
 
+a{
+list-style: none;
+color: white;
+font-size:10px
+}
 
 body {
     background-color: #dee4e0;

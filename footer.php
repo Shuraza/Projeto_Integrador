@@ -1,3 +1,4 @@
+
 <footer>
     <div class="boxs">
         <a href="index.php"><img class="logo" src="assets/img/topferro.png"></a>
@@ -6,6 +7,7 @@
         <p>(47) 9925-5732</p>
         <br>
         <p>Acompanhe a Topferro Joinville</p>
+        <a href="paginas/login.php">Administrador<a>
         <div class="boxs-icons">
         <ul>
             <li> <a href="https://www.facebook.com/estruturaparamoveis/"> <img  src="assets/img/facebook.png"> </a> </li>
