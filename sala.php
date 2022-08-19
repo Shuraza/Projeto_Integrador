@@ -3,8 +3,8 @@ include "head.php"
 ?>
 
 
-
-<img src="assets/img/SALA1.jpeg" class="img-cima">
+<img src="assets/img/SALA.jpg" class="img-cima">
+<div></div>
 <div class="icone">
     <img src="assets/img/sala.png" alt="sala">
     <h1>SALA</h1>
