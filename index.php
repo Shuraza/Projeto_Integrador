@@ -3,10 +3,6 @@ include "head.php";
 ?>
 
 
-<div>
-    <h1 class="texto">TOPFERRO</h1>
-    <p class="texto1">Valorizando seu ambiente</p>
-</div>
 
 <div class="slider">
     <div class="slides">
@@ -16,8 +12,8 @@ include "head.php";
         <input type="radio" name="radio-btn" id="radio3">
         <input type="radio" name="radio-btn" id="radio4">
         <!--Fim Radio buttons-->
-
-
+        
+        
         <!--Slide images-->
         <div class="slide first">
             <img src="assets/img/cinza.jpg" alt="imagem 1">
@@ -32,8 +28,8 @@ include "head.php";
             <img src="assets/img/preto.png" alt="imagem 4">
         </div>
         <!--Fim Slide images-->
-
-
+        
+        
         <!--Navegation auto-->
         <div class="navigation-auto">
             <div class="auto-btn1"></div>
@@ -42,7 +38,7 @@ include "head.php";
             <div class="auto-btn4"></div>
         </div>
     </div>
-
+    
     <div class="manual-navigation">
         <label for="radio1" class="manual-btn"></label>
         <label for="radio2" class="manual-btn"></label>
@@ -50,10 +46,10 @@ include "head.php";
         <label for="radio4" class="manual-btn"></label>
     </div>
     <!--Fim Navegation auto-->
-
-
-
-
+    
+    
+    
+    
 </div>
 
 <script src="assets/js/script.js"></script>
@@ -61,6 +57,10 @@ include "head.php";
 
 
 
+<div>
+    <h1 class="texto">TOPFERRO</h1>
+    <p class="texto1">Valorizando seu ambiente</p>
+</div>
 <section class="flex">
     <div class="titulos">
         <h2>Prateleiras</h2>
