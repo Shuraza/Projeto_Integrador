@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['email'] = $values['email'];
                     $_SESSION['senha'] = $values['senha'];
                 }
-                header('location:../index.php');
+                header('location:../clone/index2.php');
                 // QUALQUER COISA ARRUMA ISSO AQUI;
             } else {
                 $msgErro = "<BR>Usuário não cadastrado!";
