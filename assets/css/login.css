@@ -1,0 +1,61 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #8b998f;
+}
+form{
+    padding: 50px;
+    text-align: left;
+    height: 400px;
+    width: 300px;
+    background:#dee4e0;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
+}
+.form{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+input{
+    outline: none;
+    border-radius: 50px;
+    height: 15px;
+    width: 220px;
+    padding: 14px 30px;
+    margin-bottom: 15px;
+    border: 2px solid #011b0cfa;
+    background: transparent;
+}
+
+.botao input{
+    width: 100px;
+    height: 45px;
+    border: 1px solid #011b0c67;
+    background: #011b0c;
+    color: rgba(255, 255, 255, 0.671);
+}
+
+legend{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.logo{
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.logo img{
+    width: 240px;
+    height: 55px;
+}
+
+.login{
+    text-align: left;
+    margin-left: 10px;
+}
+nav ul li a{ 
+    font-size: 15px;
+}

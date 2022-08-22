@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['email'] = $values['email'];
                     $_SESSION['senha'] = $values['senha'];
                 }
-                header('location:../index.php');
+                header('location:../clone/index2.php');
                 // QUALQUER COISA ARRUMA ISSO AQUI;
             } else {
                 $msgErro = "<BR>Usuário não cadastrado!";
@@ -53,24 +53,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 
 <body>
-    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-        <fieldset>
-            <legend>Login</legend>
-            <label for="email">Email:</label>
-            <input type="text" name="email" value="<?php echo $email ?>">
-            <br>
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" value="<?php echo $senha ?>">
-            <br>
-            <input type="submit" value="Login" name="login">
-        </fieldset>
-     
-    </form>
-    <span><?php echo $msgErro ?></span>
+    <div class="form">
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
 
+            <div class="logo">
+                <img src="../assets/img/topferro2.png">
+            </div>
+
+            <div class="login">
+                <legend>Administrador</legend>
+
+
+
+                <label for="email"></label>
+                <input type="text" name="email" value="<?php echo $email ?>" placeholder="Email">
+
+
+
+                <label for="senha"></label>
+                <input type="password" name="senha" value="<?php echo $senha ?>" placeholder="Senha">
+
+
+
+                <div class="botao">
+                    <input type="submit" value="Login" name="login">
+                </div>
+                <span><?php echo $msgErro ?></span>
+            </div>
+        </form>
+
+    </div>
 </body>
 
 </html>

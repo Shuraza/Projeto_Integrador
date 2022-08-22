@@ -1,22 +1,23 @@
 
 <footer>
     <div class="boxs">
-        <a href="paginas/login.php"><img class="logo" src="assets/img/topferro.png"></a>
+        <a href="../paginas/logout.php"><img class="logo" src="../assets/img/topferro.png"></a>
+        <!-- LOGOUT  -->
         <p>Rua Willy Schossland, 750</p>
         <p>Joinville - Santa Catarina</p>
         <p>(47) 9925-5732</p>
         <br>
         <p>Acompanhe a Topferro Joinville</p>
-        
+   
         <div class="boxs-icons">
         <ul>
-            <li> <a href="https://www.facebook.com/estruturaparamoveis/" target="_blank"> <img  src="assets/img/facebook.png"> </a> </li>
+            <li> <a href="https://www.facebook.com/estruturaparamoveis/" target="_blank"> <img  src="../assets/img/facebook.png"> </a> </li>
         </ul>
         <ul>
-            <li> <a href="https://www.instagram.com/topferrojoinville/" target="_blank"> <img  src="assets/img/instagram.png"> </a></li>
+            <li> <a href="https://www.instagram.com/topferrojoinville/" target="_blank"> <img  src="../assets/img/instagram.png"> </a></li>
         </ul>
         <ul>
-            <li> <a href="https://api.whatsapp.com/send?phone=554799255732" target="_blank"> <img  src="assets/img/whatsapp.png"> </a></li>
+            <li> <a href="https://api.whatsapp.com/send?phone=554799255732" target="_blank"> <img  src="../assets/img/whatsapp.png"> </a></li>
         </ul>
         </div>
     </div>
