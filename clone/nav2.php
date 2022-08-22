@@ -31,16 +31,7 @@
                 </ul>
             </div>
         </li>
-<<<<<<< HEAD
         <li><a href="../paginas/listProdutos.php">Alterar</a></li>
         <li><a href="../paginas/logout.php">Logout</a></li>
     </ul>
 </nav>
-=======
-    </ul>
-    <a href="../paginas/listProdutos.php">Alterar</a>
-    <a href="../paginas/logout.php">Logout</a>
-</nav>
-
-
->>>>>>> 99beca2fd0a5869977d7174ca7dc6dd5cd401e23
