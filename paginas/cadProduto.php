@@ -94,8 +94,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="assets/css/cadProduto.css">
 </head>
 <body>
     <form method="POST" enctype="multipart/form-data">

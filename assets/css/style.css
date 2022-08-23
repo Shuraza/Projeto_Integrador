@@ -22,7 +22,7 @@ body {
 
 .logo li {
     display: block;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .logoimg {
@@ -197,4 +197,3 @@ footer .boxs:nth-child(2){
     margin-right: 10px;
     margin-top: 15px;
 }
-
