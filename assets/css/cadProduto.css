@@ -1,0 +1,32 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #8b998f;
+}
+form{
+    padding: 50px;
+    text-align: left;
+    height: 600px;
+    width: 900px;
+    background:#dee4e0;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
+}
+input{
+    outline: none;
+    border-radius: 50px;
+    height: 15px;
+    padding: 14px 30px;
+    margin-bottom: 15px;
+    border: 2px solid #011b0cfa;
+    background: transparent;
+}
+
+.form1{
+    width: 300px;
+}
+
+input[type="submit" i]{
+    width: 100px;
+    background: #011b0cfa;
+    color: white;
+}

@@ -6,7 +6,7 @@ include "head.php"
 
 <img src="assets/img/cozinha1.jpg" class="img-cima">
 <div class="icone">
-    <img src="assets/img/cozinha.png" alt="cozinha">
+    <img src="assets/img/cozinha.jpg" alt="cozinha">
     <h1>COZINHA</h1>
 </div>
 <div class="flexbox">
