@@ -27,7 +27,6 @@ body {
 
 .logoimg {
     display: block;
-    margin-right: 400px;
     width: 130px;
     height: 30px;
 }
@@ -58,6 +57,10 @@ nav {
     color: white;
     text-align: center;
     box-shadow: 5px 5px 5px 5px #0d2718 solid;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
 }
 
 
@@ -119,6 +122,7 @@ nav ul li:hover .sub-menu-1 ul li:hover {
     padding: 10px;
     border-radius: 40px;
     align-items: center;
+    margin-left: 400px;
 }
 
 .search-txt {
@@ -196,4 +200,16 @@ footer .boxs:nth-child(2){
 .boxs-icons img{
     margin-right: 10px;
     margin-top: 15px;
+}
+
+.nav2{
+    display: flex;
+    list-style: none;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.nav2 a{
+    margin-right: 10px;
+    color: red;
 }

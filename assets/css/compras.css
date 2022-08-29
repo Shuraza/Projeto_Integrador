@@ -1,22 +1,2 @@
-.compra{
-    margin: 90px;
-    max-width: 1800px;
-    display: flex;
-    justify-content: center; 
-}
 
-.img img{
-    width: 300px;
-    height: 300px;
-}
-
-.direita{
-    margin-top: 10px;
-    margin-left: 30px;
-
-}
-
-.direita h1{
-    margin-bottom: 15px;
-}
 

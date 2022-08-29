@@ -31,7 +31,5 @@
                 </ul>
             </div>
         </li>
-        <li><a href="../paginas/listProdutos.php">Alterar</a></li>
-        <li><a href="../paginas/logout.php">Logout</a></li>
     </ul>
 </nav>

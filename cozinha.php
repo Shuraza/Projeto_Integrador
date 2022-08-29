@@ -4,31 +4,32 @@ include "head.php"
 
 
 
-<img src="assets/img/cozinha1.jpg" class="img-cima">
+<img src="assets/img/cozinha.jpg" class="img-cima">
 <div class="icone">
     <img src="assets/img/cozinha.png" alt="cozinha">
-    <h1>COZINHA</h1>
+    <h1>COZINHAS</h1>
 </div>
 <div class="flexbox">
     <section class="flex1">
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+        <img src="assets/img/cinza.jpg" alt="">
         </div>
+        
     </section>
 </div>
 <div class="botao">

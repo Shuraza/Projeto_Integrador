@@ -1,6 +1,6 @@
 <nav>
     <ul>
-        <div>
+        <div class="logo">
             <li><a href="index.php"> <img src="assets/img/topferro.png" class="logoimg"></a></li>
         </div>
         <div class="search-box">

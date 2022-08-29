@@ -7,7 +7,7 @@ include "head.php"
 
 <section class="espacos-class">
     <div>
-    <a href="#"><img src="assets/img/cinza.jpg" >
+    <a href="compras.php"><img src="assets/img/cinza.jpg" >
     <p>#################</p>
     <h2>R$ ###,##</h2></a>
     </div>
