@@ -10,6 +10,7 @@ include "../include/MySql.php";
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
             echo "<table border='1' class='table'>";
+            echo "<thead class='table-dark'>";
             echo "<tr>";
             echo "  <th>idProduto</th>";
             echo "  <th>Tipo</th>";
@@ -21,6 +22,7 @@ include "../include/MySql.php";
             echo "  <th>Imagem</th>";
             echo "  <th>Alterar</th>";
             echo "  <th>Excluir</th>";
+            echo "</thead>";
             echo "</tr>";
             foreach ($info as $key => $value) {
                 echo "<tr>";

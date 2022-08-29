@@ -1,13 +1,13 @@
 body{
     font-family: 'Raleway', sans-serif;
-    background: #8b998f;
+    background:#c1c7c1;
 }
 form{
     padding: 50px;
     text-align: left;
     height: 400px;
     width: 300px;
-    background:#dee4e0;
+    background: #f1f7f3;
     border-radius: 30px;
     box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
 }

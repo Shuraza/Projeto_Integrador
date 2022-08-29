@@ -2,31 +2,32 @@
 include "head.php"
 ?>
 
-<img src="assets/img/quarto1.jpg" class="img-cima">
+<img src="assets/img/dormitorio.jpg" class="img-cima">
 <div class="icone">
     <img src="assets/img/quarto.png" alt="quarto">
-    <h1>DORMITÓRIO</h1>
+    <h1>DORMITÓRIOS</h1>
 </div>
 <div class="flexbox">
     <section class="flex1">
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+        <img src="assets/img/cinza.jpg" alt="">
         </div>
+        
     </section>
 </div>
 <div class="botao">

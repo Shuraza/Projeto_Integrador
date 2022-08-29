@@ -3,32 +3,33 @@ include "head.php"
 ?>
 
 
-<img src="assets/img/SALA.jpg" class="img-cima">
+<img src="assets/img/sala.jpg" class="img-cima">
 <div></div>
 <div class="icone">
     <img src="assets/img/sala.png" alt="sala">
-    <h1>SALA</h1>
+    <h1>SALAS</h1>
 </div>
 <div class="flexbox">
     <section class="flex1">
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+         <img src="assets/img/cinza.jpg" alt="">
         </div>
         <div>
-            <a href="#"><img src="assets/img/cinza.jpg" alt=""></a>
+        <img src="assets/img/cinza.jpg" alt="">
         </div>
+        
     </section>
 </div>
 

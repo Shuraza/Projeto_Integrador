@@ -1,7 +1,7 @@
 /*CSS SALA*/
 
 .flexbox img{
-    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
+    box-shadow: 10px 10px 15px #011b0c63;
 }
 
 
@@ -34,7 +34,13 @@ margin: 20px;
     height: 320px;
     margin-bottom: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
+
+.flex1 img:hover{
+    border: 2px solid rgb(255, 255, 255);
+}
+
 
 .flex1{
     display: flex;
