@@ -6,12 +6,14 @@ $cor = "";
 $tamanho = "";
 $material = "";
 $descricao = "";
+$tipo = "";
 
 $nomeErro = "";
 $corErro = "";
 $tamanhoErro = "";
 $materialErro = "";
 $descricaoErro = "";
+$tipoErro = "";
 $msgErro = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
@@ -51,6 +53,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             else
                 $descricao = $_POST['descricao'];
 
+            if (empty($_POST['tipo']))
+                $tipoErro = "Tipo é obrigatório!";
+            else
+                $tipo = $_POST['tipo'];
+
 
 
             if ($nome && $cor && $tamanho && $material && $descricao) {
@@ -58,15 +65,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 $sql = $pdo->prepare("SELECT * FROM PRODUTOS WHERE nome = ?");
                 if ($sql->execute(array($nome))) {
                     if ($sql->rowCount() <= 0) {
-                        $sql = $pdo->prepare("INSERT INTO PRODUTOS (idProduto, nome, cor, tamanho, material, descricao, imagem)
-                                                VALUES (null, ?, ?, ?, ?, ?, ?)");
-                        if ($sql->execute(array($nome, $cor, $tamanho, $material, $descricao, $imgContent))) {
+                        $sql = $pdo->prepare("INSERT INTO PRODUTOS (idProduto, nome, cor, tamanho, material, descricao, imagem, idclasse)
+                                                VALUES (null, ?, ?, ?, ?, ?, ?, ?)");
+                        if ($sql->execute(array($nome, $cor, $tamanho, $material, $descricao, $imgContent, $tipo))) {
                             $msgErro = "Dados cadastrados com sucesso!";
                             $nome = "";
                             $cor = "";
                             $tamanho = "";
                             $material = "";
                             $descricao = "";
+                            $tipo = "";
                             header('location:listProdutos.php');
                         } else {
                             $msgErro = "Dados não cadastrados!";
@@ -105,18 +113,35 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         <div class="form1">
 
             <input type="text" name="nome" value="<?php echo $nome ?>" placeholder="Nome">
-            <span class="obrigatorio"><?php echo $nomeErro ?></span>
+            <span class="obrigatorio">*<?php echo $nomeErro ?></span>
             <input type="text" name="cor" value="<?php echo $cor ?>" placeholder="Cor">
-            <span class="obrigatorio"><?php echo $corErro ?></span>
+            <span class="obrigatorio">*<?php echo $corErro ?></span>
             <input type="text" name="tamanho" value="<?php echo $tamanho ?>" placeholder="Tamanho">
-            <span class="obrigatorio"><?php echo $tamanhoErro ?></span>
+            <span class="obrigatorio">*<?php echo $tamanhoErro ?></span>
             <input type="text" name="material" value="<?php echo $material ?>" placeholder="Material">
-            <span class="obrigatorio"><?php echo $materialErro ?></span>
+            <span class="obrigatorio">*<?php echo $materialErro ?></span>
             <input type="text" name="descricao" value="<?php echo $descricao ?>" placeholder="Descrição">
-            <span class="obrigatorio"><?php echo $descricaoErro ?></span>
+            <span class="obrigatorio">*<?php echo $descricaoErro ?></span>
             <input type="file" name="image">
+            <input type="submit" value="Salvar" name="submit">
+            <br>
+            
+            tipo:
+            <select name="tipo">
+            <?php
+              $sql1 = $pdo->prepare('SELECT * FROM CLASSE ');
+            if ($sql1 ->execute()){
+                $info = $sql1 -> fetchAll(PDO::FETCH_ASSOC);
+                foreach($info as $key => $value){
+                    echo '<option value='.$value['idclasse'].'>'.$value['Tipo'].'</option>';
+                    
+                }
+           
+            }
+            ?>
+            </select>
+
         </div>
-        <input type="submit" value="Salvar" name="submit">
         <span><?php echo $msgErro ?></span>
     </form>
 </body>

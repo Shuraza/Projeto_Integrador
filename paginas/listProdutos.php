@@ -13,6 +13,7 @@ include "../include/MySql.php";
             echo "<thead class='table-dark'>";
             echo "<tr>";
             echo "  <th>idProduto</th>";
+            echo "  <th>Tipo</th>";
             echo "  <th>Nome</th>";
             echo "  <th>Cor</th>";
             echo "  <th>Tamanho</th>";
@@ -26,6 +27,7 @@ include "../include/MySql.php";
             foreach ($info as $key => $value) {
                 echo "<tr>";
                 echo "<td>" . $value['idProduto'] . "</td>";
+                echo "<td>" . $value['idclasse'] . "</td>";
                 echo "<td>" . $value['nome'] . "</td>";
                 echo "<td>" . $value['cor'] . "</td>";
                 echo "<td>" . $value['tamanho'] . "</td>";
