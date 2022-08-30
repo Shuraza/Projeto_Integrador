@@ -9,7 +9,7 @@ include "../include/MySql.php";
         if ($sql->execute()) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            echo "<table border='1' class='table'>";
+            echo "<table border='1' class='table table-bordered'>";
             echo "<thead class='table-dark'>";
             echo "<tr>";
             echo "  <th>idProduto</th>";
@@ -36,9 +36,9 @@ include "../include/MySql.php";
                 $imagem = $value['imagem'];
                 echo '<td><img style= "width:80px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></td>';
 
-                echo "<td><center><a href='altProduto.php?id=" . $value['idProduto'] . "'>(+)</a></center></td>";
+                echo "<td><center><a class='a' href='altProduto.php?id=" . $value['idProduto'] . "'>(+)</a></center></td>";
                              
-                echo "<td><center><a href='#'altProduto.php?id=" . $value['idProduto'] . "' onclick='deletaProduto(" . $value['idProduto'] . ")';
+                echo "<td><center><a class='a' href='#'altProduto.php?id=" . $value['idProduto'] . "' onclick='deletaProduto(" . $value['idProduto'] . ")';
                     '>(-)</a></center></td>";
 
                 echo "</tr>";
@@ -46,9 +46,11 @@ include "../include/MySql.php";
             echo "</table>";
         }
         ?>
+<div class="botao">    
+    <input type="button" value="Cadastrar Produto" onclick="parent.location='cadProduto.php'">
+    <input type="button" value="Voltar" onclick="parent.location='../clone/index2.php'">
+</div>
 
-        <input type="button" value="Cadastrar Produto" onclick="parent.location='cadProduto.php'">
-        <h3><a href="../clone/index2.php">Voltar</a></h3>
     </div>
 </div>
 

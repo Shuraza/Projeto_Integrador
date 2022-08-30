@@ -1,0 +1,25 @@
+html body{
+    background: #dee4e0;
+}
+table{
+
+    background: #bac4bd;
+    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
+
+}
+
+
+ .botao input{
+    background-color: #002710;
+    color:white;
+    border-radius: 10px;
+   max-width: fit-content;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 10px;
+
+}
+.a{
+    color:black;
+    text-decoration: none;
+}

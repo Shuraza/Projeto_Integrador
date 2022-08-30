@@ -1,9 +1,10 @@
 <?php
-include "head.php"
+include "head.php";
+include "include/MySql.php";
 ?>
 
 
-<h1 class="espacos-h1">ARARAS</h1>
+<h1 class="espacos-h1">CABIDEIROS</h1>
 
 <section class="espacos-class">
     <div>

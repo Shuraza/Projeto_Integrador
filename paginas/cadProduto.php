@@ -113,32 +113,32 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         <div class="form1">
 
             <input type="text" name="nome" value="<?php echo $nome ?>" placeholder="Nome">
-            <span class="obrigatorio">*<?php echo $nomeErro ?></span>
+            <span class="obrigatorio"><?php echo $nomeErro ?></span>
             <input type="text" name="cor" value="<?php echo $cor ?>" placeholder="Cor">
-            <span class="obrigatorio">*<?php echo $corErro ?></span>
+            <span class="obrigatorio"><?php echo $corErro ?></span>
             <input type="text" name="tamanho" value="<?php echo $tamanho ?>" placeholder="Tamanho">
-            <span class="obrigatorio">*<?php echo $tamanhoErro ?></span>
+            <span class="obrigatorio"><?php echo $tamanhoErro ?></span>
             <input type="text" name="material" value="<?php echo $material ?>" placeholder="Material">
-            <span class="obrigatorio">*<?php echo $materialErro ?></span>
+            <span class="obrigatorio"><?php echo $materialErro ?></span>
             <input type="text" name="descricao" value="<?php echo $descricao ?>" placeholder="Descrição">
-            <span class="obrigatorio">*<?php echo $descricaoErro ?></span>
-            <input type="file" name="image">
-            <input type="submit" value="Salvar" name="submit">
+            <span class="obrigatorio"><?php echo $descricaoErro ?></span>
             <br>
-            
+            <input type="file" name="image">
             tipo:
             <select name="tipo">
-            <?php
+                <?php
               $sql1 = $pdo->prepare('SELECT * FROM CLASSE ');
-            if ($sql1 ->execute()){
-                $info = $sql1 -> fetchAll(PDO::FETCH_ASSOC);
-                foreach($info as $key => $value){
-                    echo '<option value='.$value['idclasse'].'>'.$value['Tipo'].'</option>';
+              if ($sql1 ->execute()){
+                  $info = $sql1 -> fetchAll(PDO::FETCH_ASSOC);
+                  foreach($info as $key => $value){
+                      echo '<option value='.$value['idclasse'].'>'.$value['Tipo'].'</option>';
+                      
+                    }
                     
                 }
-           
-            }
-            ?>
+                
+                ?>
+                <input type="submit" value="Salvar" name="submit"> <br>
             </select>
 
         </div>
