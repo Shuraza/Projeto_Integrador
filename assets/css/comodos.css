@@ -26,7 +26,7 @@ margin: 20px;
 }
 
 .img-cima{
-    height:410px;
+    height:550px;
 }
 
 .flex1 img{
@@ -35,6 +35,7 @@ margin: 20px;
     margin-bottom: 5px;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 .flex1 img:hover{

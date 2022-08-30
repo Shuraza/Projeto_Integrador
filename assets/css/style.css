@@ -87,7 +87,7 @@ nav ul li:hover .sub-menu-1 {
     display: block;
     position: absolute;
     background-color: #0d2718;
-    width: 150px;
+    width: 160px;
     border-radius: 15px;
     margin-top: 15px;
     margin-left: -38px;
@@ -101,7 +101,7 @@ nav ul li:hover .sub-menu-1 ul {
 }
 
 nav ul li:hover .sub-menu-1 ul li {
-    width: 125px;
+    width: 130px;
     text-align: left;
     border-radius: 10px;
     transition: 0.7s;
