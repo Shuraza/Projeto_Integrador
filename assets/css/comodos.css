@@ -1,14 +1,26 @@
 /*CSS SALA*/
 
-.flexbox img{
+.elemento{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 5px;
     box-shadow: 10px 10px 15px #011b0c63;
+    
 }
 
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1100px;
+}
 
 .icone{
     text-align: center;
     margin-top: 100px;
-    margin-right: 30px;
     margin-bottom: 30px;
 }
 
@@ -16,6 +28,16 @@
 font-size: 20px;
 color: #011b0cec;
 margin: 20px;
+}
+
+.container img:hover{
+    border: 1px solid #dee4e000;
+    transition: all 0.5s;
+}
+
+.container img{
+    cursor: pointer;
+    transition: all 1s;
 }
 
 .icone img{
@@ -29,36 +51,6 @@ margin: 20px;
     height:550px;
 }
 
-.flex1 img{
-    width: 320px;
-    height: 320px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.flex1 img:hover{
-    border: 2px solid rgb(255, 255, 255);
-}
-
-
-.flex1{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 990px;
-    margin: 10px;
-
-}
-
-.flex1>div{
-    flex: 1 1 200px;
-}
-
-.flexbox{
-    display: flex;
-   justify-content: center;
-}
 
 .botao{
     text-align: center;
