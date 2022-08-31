@@ -4,7 +4,8 @@
             <li><a href="index.php"> <img src="assets/img/topferro.png" class="logoimg"></a></li>
         </div>
         <div class="search-box">
-            <input type="text" class="search-txt" placeholder=" Pesquisar">
+            <input type="text" class="search-txt" name="pesquisa" placeholder=" Pesquisar">
+         
             <a href="#" class="search-btn">
                 <img src="assets/img/lupa.png" alt="lupa" height="20" width="20">
             </a>
