@@ -9,7 +9,7 @@ include "../include/MySql.php";
         if ($sql->execute()) {
             $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            echo "<table border='1' class='table table-bordered'>";
+            echo "<table border='1' class='table table-bordered '>";
             echo "<thead class='table-dark'>";
             echo "<tr>";
             echo "  <th>idProduto</th>";

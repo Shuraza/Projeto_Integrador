@@ -1,5 +1,14 @@
 <?php
-include "head.php"
+include "head.php";
+include "include/MySql.php";
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS');
+if ($sql->execute()) {
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($info as $key => $value) {
+    echo $value["idProduto"] ;
+    $imagem = $value['imagem'];
+    }
+}
 ?>
 
 <h1 class="espacos-h1">ARMÁRIOS</h1>
