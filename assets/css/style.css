@@ -213,3 +213,10 @@ footer .boxs:nth-child(2){
     margin-right: 10px;
     color: red;
 }
+
+footer .adm{
+    font-size: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: #51725f;
+}
