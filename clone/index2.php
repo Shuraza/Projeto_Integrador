@@ -56,36 +56,36 @@ include "head2.php";
 <section class="flex">
     <div class="titulos">
         <h2>Prateleiras</h2>
-        <a href="prateleira.php"><img src="../assets/img/prateleira.png"></a>
+        <a href="prateleira2.php"><img src="../assets/img/prateleira.png"></a>
     </div>
     <div class="titulos">
         <h2>Armários</h2>
-        <a href="armarios.php"><img src="../assets/img/armario.png"></a>
+        <a href="armarios2.php"><img src="../assets/img/armario.png"></a>
     </div>
     <div class="titulos">
         <h2>Decorações</h2>
-        <a href="decoracoes.php"><img src="../assets/img/decoracao.png"></a>
+        <a href="decoracoes2.php"><img src="../assets/img/decoracao.png"></a>
     </div>
     <div class="titulos">
         <h2>Suportes</h2>
-        <a href="exteriores.php"><img src="../assets/img/suportes.png"></a>
+        <a href="exteriores2.php"><img src="../assets/img/suportes.png"></a>
     </div>
 
     <div class="titulos">
         <h2>Industriais</h2>
-        <a href="industriais.php"><img src="../assets/img/industriais.png"></a>
+        <a href="industriais2.php"><img src="../assets/img/industriais.png"></a>
     </div>
     <div class="titulos">
         <h2>Escrivaninha</h2>
-        <a href="escrivaninha.php"><img src="../assets/img/escrivaninha.png"></a>
+        <a href="escrivaninha2.php"><img src="../assets/img/escrivaninha.png"></a>
     </div>
     <div class="titulos">
         <h2>Molduras</h2>
-        <a href="molduras.php"><img src="../assets/img/moldura.png"></a>
+        <a href="molduras2.php"><img src="../assets/img/moldura.png"></a>
     </div>
     <div class="titulos">
         <h2>Cabideiros</h2>
-        <a href="araras.php"><img src="../assets/img/cabideiro.png"></a>
+        <a href="araras2.php"><img src="../assets/img/cabideiro.png"></a>
     </div>
 </section>
 
