@@ -62,12 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
             if ($nome && $cor && $tamanho && $material && $descricao) {
 
-                $sql = $pdo->prepare("SELECT * FROM PRODUTOS WHERE nome = ?");
-                if ($sql->execute(array($nome))) {
+                $sql = $pdo->prepare("SELECT * FROM PRODUTOS WHERE idProduto = ?");
+                if ($sql->execute(array($idProduto))) {
                     if ($sql->rowCount() <= 0) {
                         $sql = $pdo->prepare("INSERT INTO PRODUTOS (idProduto, nome, cor, tamanho, material, descricao, imagem, idclasse)
                                                 VALUES (null, ?, ?, ?, ?, ?, ?, ?)");
-                        if ($sql->execute(array($nome, $cor, $tamanho, $material, $descricao, $imgContent, $tipo))) {
+                        if ($sql->execute(array( $nome, $cor, $tamanho, $material, $descricao, $imgContent, $tipo))) {
                             $msgErro = "Dados cadastrados com sucesso!";
                             $nome = "";
                             $cor = "";
