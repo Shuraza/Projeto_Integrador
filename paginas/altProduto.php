@@ -24,6 +24,7 @@ if (isset($_GET['id'])) {
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach ($info as $key => $value) {
             $idProduto = $value['idProduto'];
+            $tipo = $value['idclasse'];
             $nome = $value['nome'];
             $cor = $value['cor'];
             $tamanho = $value['tamanho'];
@@ -61,6 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     else
         $descricao = $_POST['descricao'];
 
+    if (empty($_POST['tipo']))
+        $tipoErro = "Tipo é obrigatório!";
+    else
+        $tipo = $_POST['tipo'];
+
 
 
     if (!empty($_FILES["image"]["name"])) {
@@ -78,12 +84,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     }
 
     if ($nome && $cor && $material && $tamanho && $descricao) {
-        //Verificar se ja existe o cor
-        $sql = $pdo->prepare("SELECT * FROM PRODUTOS WHERE nome = ? AND idProduto <> ?");
-        if ($sql->execute(array($nome, $idProduto))) {
-            if ($sql->rowCount() <= 0) {
-                $sql = $pdo->prepare("UPDATE PRODUTOS SET idProduto=?, 
+        $sql = $pdo->prepare("SELECT * FROM PRODUTOS WHERE idProduto = ?");
+        $sql = $pdo->prepare("UPDATE PRODUTOS SET idProduto=?, 
                                                              nome=?, 
+                                                             idclasse=?,
                                                              cor=?, 
                                                              tamanho=?, 
                                                              material=?,
@@ -91,17 +95,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                                                              imagem=?
                                                        WHERE idProduto=?");
 
-                if ($sql->execute(array($idProduto, $nome, $cor, $tamanho, $material, $descricao, $imgContent, $idProduto))) {
-                    $msgErro = "Dados alterados com sucesso!";
-                    header('location:listProdutos.php');
-                } else {
-                    $msgErro = "Dados não cadastrados!";
-                }
-            } else {
-                $msgErro = "Nome de Produto já cadastrado!!";
-            }
+        if ($sql->execute(array($idProduto, $nome, $tipo, $cor, $tamanho, $material, $descricao, $imgContent, $idProduto))) {
+            $msgErro = "Dados alterados com sucesso!";
+            header('location:listProdutos.php');
         } else {
-            $msgErro = "Erro no comando UPDATE!";
+            $msgErro = "Dados não cadastrados!";
         }
     } else {
         $msgErro = "Dados não alterados!";
@@ -121,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 <body>
     <form method="POST" enctype="multipart/form-data">
-            <legend>Alterar informações do Produto</legend>
+        <legend>Alterar informações do Produto</legend>
         <div class="form1">
             <input type="text" name="nome" value="<?php echo $nome ?>" placeholder="Nome">
             <span class="obrigatorio"><?php echo $nomeErro ?></span>
@@ -141,6 +139,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             <br>
             <input type="file" name="image">
             <br>
+            <div class="select">
+            <div class="tipo">
+
+                <select name="tipo">
+                    <?php
+                    $sql1 = $pdo->prepare('SELECT * FROM CLASSE ');
+                    if ($sql1->execute()) {
+                        $info = $sql1->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($info as $key => $value) {
+                            echo '<option value=' . $value['idclasse'] . '>' . $value['Tipo'] . '</option>';
+                        }
+                    }
+
+                    ?>
         </div>
         <input type="submit" value="Salvar" name="submit">
         <span><?php echo $msgErro ?></span>
