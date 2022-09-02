@@ -123,24 +123,27 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             <input type="text" name="descricao" value="<?php echo $descricao ?>" placeholder="Descrição">
             <span class="obrigatorio"><?php echo $descricaoErro ?></span>
             <br>
-            <input type="file" name="image">
-            tipo:
-            <select name="tipo">
-                <?php
-              $sql1 = $pdo->prepare('SELECT * FROM CLASSE ');
-              if ($sql1 ->execute()){
-                  $info = $sql1 -> fetchAll(PDO::FETCH_ASSOC);
-                  foreach($info as $key => $value){
-                      echo '<option value='.$value['idclasse'].'>'.$value['Tipo'].'</option>';
-                      
-                    }
-                    
-                }
-                
-                ?>
-                <input type="submit" value="Salvar" name="submit"> <br>
-            </select>
+        </div>
+        <input type="file" name="image">
+        <div class="select">
+            <div class="tipo">
 
+                <select name="tipo">
+                    <?php
+                    $sql1 = $pdo->prepare('SELECT * FROM CLASSE ');
+                    if ($sql1->execute()) {
+                        $info = $sql1->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($info as $key => $value) {
+                            echo '<option value=' . $value['idclasse'] . '>' . $value['Tipo'] . '</option>';
+                        }
+                    }
+
+                    ?>
+                </select>
+            </div>
+        </div>
+        <div class="salvar">
+            <input type="submit" value="Salvar" name="submit">
         </div>
         <span><?php echo $msgErro ?></span>
     </form>

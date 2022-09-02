@@ -2,7 +2,7 @@
 include "head.php"
 ?>
 
-<img src="assets/img/dormitorio.jpg" class="img-cima">
+<img src="assets/img/quarto-cima.jpg" class="img-cima">
 <div class="icone">
     <img src="assets/img/quarto.png" alt="quarto">
     <h1>DORMITÓRIOS</h1>
