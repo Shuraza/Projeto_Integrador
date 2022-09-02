@@ -4,7 +4,7 @@ include "head.php"
 
 
 
-<img src="assets/img/cozinha.jpg" class="img-cima">
+<img src="assets/img/cozinha-cima.jpg" class="img-cima">
 <div class="icone">
     <img src="assets/img/cozinha.png" alt="cozinha">
     <h1>COZINHAS</h1>
