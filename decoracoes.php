@@ -17,10 +17,6 @@ if ($sql->execute()) {
     }
 }
 echo "</section>";
-?>
 
-
-
-<?php
 include "footer.php"
 ?>
