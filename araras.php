@@ -12,7 +12,7 @@ if ($sql->execute()) {
     echo "<div>";
     $imagem = $value["imagem"];
     echo '<a href="#"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></td>';
-    echo '<h2>$value["nome"]</h2>';
+    echo '<h2>'.$value["nome"].'</h2>';
     echo "</div>";   
     }
 }
