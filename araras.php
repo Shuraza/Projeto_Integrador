@@ -11,7 +11,7 @@ if ($sql->execute()) {
     foreach ($info as $key => $value) {
     echo "<div>";
     $imagem = $value["imagem"];
-    echo '<a href="compras.php"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></td>';
+    echo '<a href="compras.php"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
     echo '<h2>'.$value["nome"].'</h2>';
     echo "</div>";   
     }
