@@ -1,10 +1,10 @@
 <?php
-include "head.php"
+include "head2.php"
 ?>
 <div class="container-produto">
     <div class="container-compras">
         <div class="container-image">
-            <img src="assets/img/.jpg">
+            <img src="../assets/img/.jpg">
         </div>
         <div class="container-informacoes">
 
@@ -19,7 +19,7 @@ include "head.php"
                 <p>Material</p>
             </div>
             <div class="tamanho-descricao">
-                <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i</p>
             </div>
             <div class="container-botao">
                 <a href="https://api.whatsapp.com/send?phone=554799255732" target="_blank"><input type="submit" value="Fale direto com o Vendedor"></a>
@@ -34,17 +34,17 @@ include "head.php"
         <h2>MAIS PRODUTOS</h2>
     </div>
     <div class="container-outras-imgs">
-    <img src="assets/img/.jpg">
-    <img src="assets/img/.jpg">
-    <img src="assets/img/.jpg">
-    <img src="assets/img/.jpg">
-    <img src="assets/img/.jpg">
-    <img src="assets/img/.jpg">
-    <img src="assets/img/.jpg">
-    <img src="assets/img/.jpg">
+    <img src="../assets/img/.jpg">
+    <img src="../assets/img/.jpg">
+    <img src="../assets/img/.jpg">
+    <img src="../assets/img/.jpg">
+    <img src="../assets/img/.jpg">
+    <img src="../assets/img/.jpg">
+    <img src="../assets/img/.jpg">
+    <img src="../assets/img/.jpg">
     </div>
 </div>
 
 <?php
-include "footer.php"
+include "footer2.php"
 ?>
