@@ -44,6 +44,11 @@ body {
 
 }
 
+.espacos-contato{
+    display: flex;
+    margin-left: 700px;
+}
+
 .sub-menu-1 ul li img {
     max-width: 18px;
     margin-right: 10px;

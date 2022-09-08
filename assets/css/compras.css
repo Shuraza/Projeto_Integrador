@@ -117,3 +117,8 @@ input[type="submit" i] {
 .mais-produtos h2{
     font-size: 20px;
 }
+
+.outros-produtos{
+    display: flex;
+    justify-content: space-evenly;
+}

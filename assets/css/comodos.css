@@ -18,6 +18,7 @@
     max-width: 1100px;
 }
 
+
 .icone{
     text-align: center;
     margin-top: 100px;
@@ -35,7 +36,7 @@ margin: 20px;
     transition: all 0.5s;
 }
 
-.container img{
+.elemento img{
     cursor: pointer;
     transition: all 1s;
 }
