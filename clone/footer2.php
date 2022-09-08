@@ -1,6 +1,6 @@
 <footer>
     <div class="boxs">
-        <a href="../paginas/logout.php"><img class="logo" src="../assets/img/topferro.png"></a>
+        <img class="logo" src="../assets/img/topferro.png">
         <!-- LOGOUT  -->
         <p>Rua Willy Schossland, 750</p>
         <p>Joinville - Santa Catarina</p>
