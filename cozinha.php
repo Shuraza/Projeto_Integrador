@@ -10,14 +10,14 @@ include "head.php"
     <h1>COZINHAS</h1>
 </div>
 <div class="container">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-</div>
-
+    <img class="elemento" src="assets/img/cozinha001.jpg" alt="">
+    <img class="elemento" src="assets/img/cozinha002.jpg" alt="">
+    <img class="elemento" src="assets/img/cozinha003.jpg" alt="">
+    <img class="elemento" src="assets/img/cozinha004.jpg" alt="">
+    <img class="elemento" src="assets/img/cozinha005.jpg" alt="">
+    <img class="elemento" src="assets/img/cozinha006.jpg" alt="">
+    </div>
+    
 <div class="botao">
     <button><a href="https://api.whatsapp.com/send?phone=554799255732">Solicite seu projeto</a></button>
 </div>

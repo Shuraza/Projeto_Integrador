@@ -8,12 +8,12 @@ include "head.php"
     <h1>DORMITÓRIOS</h1>
 </div>
 <div class="container">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
+    <img class="elemento" src="assets/img/quarto001.jpg" alt="">
+    <img class="elemento" src="assets/img/quarto002.jpg" alt="">
+    <img class="elemento" src="assets/img/quarto003.jpg" alt="">
+    <img class="elemento" src="assets/img/quarto004.jpg" alt="">
+    <img class="elemento" src="assets/img/quarto005.jpg" alt="">
+    <img class="elemento" src="assets/img/quarto006.jpg" alt="">
 </div>
 
 

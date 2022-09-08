@@ -11,12 +11,12 @@ include "head.php"
 </div>
 
 <div class="container">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
-    <img class="elemento" src="assets/img/cinza.jpg" alt="">
+    <img class="elemento" src="assets/img/sala001.jpg" alt="">
+    <img class="elemento" src="assets/img/sala002.jpg" alt="">
+    <img class="elemento" src="assets/img/sala003.jpg" alt="">
+    <img class="elemento" src="assets/img/sala004.jpg" alt="">
+    <img class="elemento" src="assets/img/sala005.jpg" alt="">
+    <img class="elemento" src="assets/img/sala006.jpg" alt="">
 </div>
 
 
