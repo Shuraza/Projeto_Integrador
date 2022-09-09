@@ -1,50 +1,59 @@
 <?php
-include "head2.php"
-?>
-<div class="container-produto">
-    <div class="container-compras">
-        <div class="container-image">
-            <img src="../assets/img/.jpg">
-        </div>
-        <div class="container-informacoes">
-
-            <h1>NOME</h1>
-            <div class="tamanho-cor">
-                <p>Cor</p>
-            </div>
-            <div class="tamanho-tm">
-                <p>Tamanho</p>
-            </div>
-            <div class="tamanho-material">
-                <p>Material</p>
-            </div>
-            <div class="tamanho-descricao">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i</p>
-            </div>
-            <div class="container-botao">
-                <a href="https://api.whatsapp.com/send?phone=554799255732" target="_blank"><input type="submit" value="Fale direto com o Vendedor"></a>
-            </div>
-        </div>
-    </div>
-</div>
+include "head2.php";
+include "../include/MySql.php";
 
 
-<div class="outros-produtos">
-    <div class="mais-produtos">
-        <h2>MAIS PRODUTOS</h2>
-    </div>
-    <div class="container-outras-imgs">
-    <img src="../assets/img/.jpg">
-    <img src="../assets/img/.jpg">
-    <img src="../assets/img/.jpg">
-    <img src="../assets/img/.jpg">
-    <img src="../assets/img/.jpg">
-    <img src="../assets/img/.jpg">
-    <img src="../assets/img/.jpg">
-    <img src="../assets/img/.jpg">
-    </div>
-</div>
 
-<?php
-include "footer2.php"
-?>
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idProduto ="14" ');
+if ($sql->execute()) {
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($info as $key => $value) {
+
+        echo "<div class='container-produto'>";
+        echo "<div class='container-compras'>";
+        echo "<div class='container-image'>";
+        $imagem = $value["imagem"];
+        echo '<img src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '">';
+        echo "</div>";
+        echo "<div class='container-informacoes'>";
+        
+        echo '<h1>'.$value["nome"].'</h1>';
+        echo   "<div class='tamanho-cor'>";
+        echo  '<p>'.$value["cor"] .'</p>'; 
+        echo     "</div>";
+        echo     "<div class='tamanho-tm'>";
+        echo          '<p>'.$value["tamanho"].'</p>';
+        echo       "</div>";
+        echo      "<div class='tamanho-material'>";
+        echo         '<p>'.$value["material"].'</p>';
+        echo    "</div>";
+        echo      "<div class='tamanho-descricao'>";
+        echo     '<p>'.$value["descricao"].'</p>';
+        echo "</div>";
+        echo "<div class='container-botao'>";
+        echo   " <a href='https://api.whatsapp.com/send?phone=554799255732' target='_blank'><input type='submit' value='Fale direto com o Vendedor'></a>";
+        echo  "</div>";
+        echo  "</div>";
+        echo    "</div>";
+        echo"</div>";
+    }
+}
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse LIKE "1" ');
+echo "<div class='mais-produtos'>";
+echo "<h2>MAIS PRODUTOS</h2>";
+echo "</div>";
+echo"<div class='outros-produtos'>";
+if ($sql->execute()) {
+    $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($info as $key => $value) {
+        echo "<div class='container-outras-imgs'>";
+        $imagem = $value["imagem"];
+        echo '<img src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '">';
+        echo  "</div>";
+        
+    }
+}
+echo"</div>";
+
+
+include "footer2.php";
