@@ -2,10 +2,14 @@
 include "head.php";
 include "include/MySql.php";
 
+$codigo = "";
+if (isset($_GET['codigo'])){
+    $codigo = $_GET['codigo'];
+} 
 
 
-$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idProduto ="10" ');
-if ($sql->execute()) {
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idProduto = ?');
+if ($sql->execute(array($codigo))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $value) {
 
