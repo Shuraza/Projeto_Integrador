@@ -4,7 +4,7 @@ include "include/MySql.php";
 
 
 
-$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idProduto ="14" ');
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idProduto ="10" ');
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $value) {
