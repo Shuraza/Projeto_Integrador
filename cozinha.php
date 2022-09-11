@@ -19,7 +19,7 @@ include "head.php"
     </div>
     
 <div class="botao">
-    <button><a href="https://api.whatsapp.com/send?phone=554799255732">Solicite seu projeto</a></button>
+    <button><a href="https://api.whatsapp.com/send?phone=554799255732">Solicite seu orçamento</a></button>
 </div>
 
 <?php
