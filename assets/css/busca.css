@@ -1,0 +1,27 @@
+body{
+    font-family: sans-serif;
+}
+
+.resultados{
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.resultados ul li{
+    list-style: none;
+}
+
+.resultados a{
+    display: flex;
+    max-width: 80px;
+    padding: 10px;
+    background-color: #007fff;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+}

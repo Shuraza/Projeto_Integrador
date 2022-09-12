@@ -4,7 +4,9 @@
             <li><a href="index.php"> <img src="assets/img/topferro.png" class="logoimg"></a></li>
         </div>
         <div class="search-box">
-            <input type="text" class="search-txt" placeholder=" Pesquisar">
+            <form action="../Projeto_Integrador/paginas/busca.php">
+                <input name="busca" value="<?php if(isset($_GET['busca'])) echo $_GET['busca']; ?>" placeholder="Digite os termos de pesquisa" type="text">
+            </form>
             <a href="#" class="search-btn">
                 <img src="assets/img/lupa.png" alt="lupa" height="20" width="20">
             </a>
