@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="assets/css/principal.css">
     <link rel="stylesheet" href="assets/css/comodos.css">
     <link rel="stylesheet" href="assets/css/espacos.css">
+    <link rel="stylesheet" href="assets/css/compras.css">
+    <link rel="stylesheet" href="assets/css/resultado.css">
     <title>Topferro</title>
 </head>
 <?php
