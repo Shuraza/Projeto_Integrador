@@ -4,8 +4,7 @@ include "../include/conexao.php";
 
 <title>Resultados</title>
 <link rel="stylesheet" href="../assets/css/busca.css">
-
-<div class="aparencia">
+<div class="resultado">
     <?php
         if (!isset($_GET['busca'])) {
             ?>
@@ -39,14 +38,14 @@ include "../include/conexao.php";
                             <hr>
                             <li><strong>Descrição - </strong><?php echo $dados['descricao']; ?></li>
                             <hr>
-                            <a href="#">Saiba mais</a>
+                            <a href="">Saiba mais</a>
                         </ul>
                     </div>
                     <?php
                 }
             }
             ?>
-        <?php
-        } 
+            <?php
+        }
     ?>
-</div>
+</div> 
