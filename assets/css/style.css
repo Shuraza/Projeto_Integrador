@@ -46,7 +46,6 @@ body {
 
 .espacos-contato{
     display: flex;
-    margin-left: 700px;
 }
 
 .sub-menu-1 ul li img {
@@ -65,7 +64,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    
+    height: 90px;
 }
 
 
@@ -117,36 +116,27 @@ nav ul li:hover .sub-menu-1 ul li:hover {
     background-color: #b0bdb433;
 }
 
+
 .search-box {
-    margin-top: 25px;
-    margin-right: 25px;
+    width: 200px;
     display: flex;
-    justify-content: space-between;
-    background: #ffffff;
-    height: 30px;
-    padding: 10px;
+    align-items: center;
+    background: white;
+    height: 15px;
     border-radius: 40px;
-    align-items: center;
-    margin-left: 400px;
+    padding: 13px;
+    margin-top: 28px;
+    margin-right: 10px;
+    margin-left: 450px
 }
 
-.search-txt {
+input[type="text" i]{
     border: none;
-    background: none;
     outline: none;
-    color: #011b0c;
-    font-size: 15px;
-    line-height: 30px;
-
 }
 
-.search-btn {
-    width: 40px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+input[type="text" i] {
+    border: none;
 }
 
 .boxs-icons img{
