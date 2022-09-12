@@ -1,87 +1,66 @@
 <?php
-include "../include/conexao.php";
+    // include "../include/conexao.php";
+    include "../include/MySql.php";
+    include "../head.php";
 ?>
+
 
 <title>Resultados</title>
-<link rel="stylesheet" href="../assets/css/busca.css">
 <div class="resultado">
     <?php
-
-include('MySql.php');
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Busca</title>
-</head>
-<body>
-    <h1>Lista de Veículos</h1>
-    <form action="">
-        <input name="busca" value="<?php if(isset($_GET['busca'])) echo $_GET['busca']; ?>" placeholder="Digite os termos de pesquisa" type="text">
-        <button type="submit">Pesquisar</button>
-    </form>
-    <br>
-    <table width="600px" border="1">
-        <tr>
-            <th>Marca</th>
-            <th>Veículo</th>
-            <th>modelo</th>
-        </tr>
-        <?php
-        if (!isset($_GET['busca'])) {
+    if (!isset($_GET['busca'])) {
+        ?>
+    <tr>
+        <td colspan="3">Digite algo para pesquisar...</td>
+    </tr>
+    <?php
+    } else {
+        $pesquisa = $_GET['busca'];
+        $sql_code = "SELECT * 
+            FROM produtos 
+            WHERE nome LIKE '%$pesquisa%' 
+            OR cor LIKE '%$pesquisa%'";
+        $sql = $pdo->prepare($sql_code);
+        $sql->execute();
+        
+        // $sql_query = $mysqli->query($sql_code) or die("ERRO ao consultar! " . $mysqli->error); 
+        
+        if ($sql->rowCount() == 0) {
             ?>
         <tr>
-            <td colspan="3">Digite algo para pesquisar...</td>
+            <td colspan="3">Nenhum resultado encontrado...</td>
         </tr>
         <?php
         } else {
-            $pesquisa = $mysqli->real_escape_string($_GET['busca']);
-            $sql_code = "SELECT * 
-                FROM produtos 
-                WHERE nome LIKE '%$pesquisa%' 
-                OR cor LIKE '%$pesquisa%'
-                OR descricao LIKE '%$pesquisa%'";
-            $sql_query = $mysqli->query($sql_code) or die("ERRO ao consultar! " . $mysqli->error); 
-            
-            if ($sql_query->num_rows == 0) {
+            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($info as $key => $value) {
                 ?>
-            <tr>
-                <td colspan="3">Nenhum resultado encontrado...</td>
-            </tr>
-            <?php
-            } else {
-                while($dados = $sql_query->fetch_assoc()) {
-                    ?>
-                    <div class="resultados">
-                        <ul>
-                            <li><strong>Nome - </strong><?php echo $dados['nome']; ?></li>
-                            <hr>
-                            <li><strong>Cor - </strong><?php echo $dados['cor']; ?></li>
-                            <hr>
-                            <li><strong>Descrição - </strong><?php echo $dados['descricao']; ?></li>
-                            <hr>
-                            <a href="">Saiba mais</a>
-                        </ul>
-                    </div>
-                    <tr>
-                        <td><?php echo $dados['nome']; ?></td>
-                        <td><?php echo $dados['cor']; ?></td>
-                        <td><?php echo $dados['descricao']; ?></td>
-                    </tr>
-                    <?php
-                }
+                <?php
+          echo      '<div class="tudo-resultado">';
+          echo '<div class="container-resultado">';
+          echo  '<div class="resultado-produto">';
+          echo '<div class="img-resultado">';
+          $imagem = $value["imagem"];
+          echo '<a href="compras.php"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
+          echo'</div>';
+          echo '<div class="elementos-resultado">';
+          echo    '<div class="resultado-descricao">';
+          echo        '<h1>'.$value["nome"].'</h1>';
+          echo       '<p>'.$value["tamanho"].'</p>';
+          echo       '<h3>'.$value["material"].'</h3>';
+          echo    '</div>';
+          echo  '<div class="input-resultado">';
+          echo         '<input type="submit" value="Veja Mais">';
+          echo  ' </div>';
+          echo  '</div>';
+          echo '</div>';
+          echo' </div>';
+          echo     '</div>';
+                ?>
+                <?php
             }
-            ?>
-            <?php
         }
-    ?>
-</div> 
+        ?>
         <?php
-        } ?>
-    </table>
-</body>
-</html>
+    }
+?>
