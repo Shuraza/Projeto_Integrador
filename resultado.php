@@ -105,4 +105,31 @@ include "head.php"
 
 <?php
 include "footer.php"
+?><?php
+include "head.php";
+
+echo '<div class="tudo-resultado">';
+   echo '<div class="container-resultado">';
+   echo     '<div class="resultado-produto">';
+            echo '<div class="img-resultado">';
+              echo  '<img src="assets/img/cinza.jpg">';
+            echo'</div>';
+            echo  '<div class="elementos-resultado">';
+            echo   '<div class="resultado-descricao">';
+            echo      '<h1>NOME</h1>';
+            echo      '<p>Tamanho</p>';
+            echo      '<h3>Material</h3>';
+            echo  '</div>';
+            echo   '<div class="input-resultado">';
+            echo       '<input type="submit" value="Veja Mais">';
+                    echo   '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo'</div>';
+
+
+
+
+include "footer.php"
 ?>
