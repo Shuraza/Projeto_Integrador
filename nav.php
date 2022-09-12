@@ -3,6 +3,13 @@
         <div class="logo">
             <li><a href="index.php"> <img src="assets/img/topferro.png" class="logoimg"></a></li>
         </div>
+        <div class="search-box">
+        <form action="../Projeto_Integrador/paginas/busca.php">
+            <input name="busca" value="<?php if(isset($_GET['busca'])) echo $_GET['busca']; ?>" placeholder="Pesquisar" type="text">
+        </form>
+            <a href="#" class="search-btn">
+                <img src="assets/img/lupa.png" alt="lupa" height="20" width="20">
+            </a>
         <div class="espacos-contato">
             <li>
                 <p>Espaços</p>

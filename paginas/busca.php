@@ -1,4 +1,11 @@
 <?php
+include "../include/conexao.php";
+?>
+
+<title>Resultados</title>
+<link rel="stylesheet" href="../assets/css/busca.css">
+<div class="resultado">
+    <?php
 
 include('MySql.php');
 
@@ -34,7 +41,7 @@ include('MySql.php');
         } else {
             $pesquisa = $mysqli->real_escape_string($_GET['busca']);
             $sql_code = "SELECT * 
-                FROM PRODUTOS
+                FROM produtos 
                 WHERE nome LIKE '%$pesquisa%' 
                 OR cor LIKE '%$pesquisa%'
                 OR descricao LIKE '%$pesquisa%'";
@@ -49,6 +56,17 @@ include('MySql.php');
             } else {
                 while($dados = $sql_query->fetch_assoc()) {
                     ?>
+                    <div class="resultados">
+                        <ul>
+                            <li><strong>Nome - </strong><?php echo $dados['nome']; ?></li>
+                            <hr>
+                            <li><strong>Cor - </strong><?php echo $dados['cor']; ?></li>
+                            <hr>
+                            <li><strong>Descrição - </strong><?php echo $dados['descricao']; ?></li>
+                            <hr>
+                            <a href="">Saiba mais</a>
+                        </ul>
+                    </div>
                     <tr>
                         <td><?php echo $dados['nome']; ?></td>
                         <td><?php echo $dados['cor']; ?></td>
@@ -58,6 +76,10 @@ include('MySql.php');
                 }
             }
             ?>
+            <?php
+        }
+    ?>
+</div> 
         <?php
         } ?>
     </table>
