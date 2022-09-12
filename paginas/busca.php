@@ -1,9 +1,11 @@
 <?php
-    include "../include/conexao.php";
+    // include "../include/conexao.php";
+    include "../include/MySql.php";
+    include "../head.php";
 ?>
 
+
 <title>Resultados</title>
-<link rel="stylesheet" href="../assets/css/busca.css">
 <div class="resultado">
     <?php
     if (!isset($_GET['busca'])) {
@@ -13,34 +15,48 @@
     </tr>
     <?php
     } else {
-        $pesquisa = $mysqli->real_escape_string($_GET['busca']);
+        $pesquisa = $_GET['busca'];
         $sql_code = "SELECT * 
             FROM produtos 
             WHERE nome LIKE '%$pesquisa%' 
-            OR cor LIKE '%$pesquisa%'
-            OR descricao LIKE '%$pesquisa%'";
-        $sql_query = $mysqli->query($sql_code) or die("ERRO ao consultar! " . $mysqli->error); 
+            OR cor LIKE '%$pesquisa%'";
+        $sql = $pdo->prepare($sql_code);
+        $sql->execute();
         
-        if ($sql_query->num_rows == 0) {
+        // $sql_query = $mysqli->query($sql_code) or die("ERRO ao consultar! " . $mysqli->error); 
+        
+        if ($sql->rowCount() == 0) {
             ?>
         <tr>
             <td colspan="3">Nenhum resultado encontrado...</td>
         </tr>
         <?php
         } else {
-            while($dados = $sql_query->fetch_assoc()) {
+            $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($info as $key => $value) {
                 ?>
-                <div class="resultados">
-                    <ul>
-                        <li><strong>Nome - </strong><?php echo $dados['nome']; ?></li>
-                        <hr>
-                        <li><strong>Cor - </strong><?php echo $dados['cor']; ?></li>
-                        <hr>
-                        <li><strong>Descrição - </strong><?php echo $dados['descricao']; ?></li>
-                        <hr>
-                        <a href="">Saiba mais</a>
-                    </ul>
-                </div>
+                <?php
+          echo      '<div class="tudo-resultado">';
+          echo '<div class="container-resultado">';
+          echo  '<div class="resultado-produto">';
+          echo '<div class="img-resultado">';
+          $imagem = $value["imagem"];
+          echo '<a href="compras.php"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
+          echo'</div>';
+          echo '<div class="elementos-resultado">';
+          echo    '<div class="resultado-descricao">';
+          echo        '<h1>'.$value["nome"].'</h1>';
+          echo       '<p>'.$value["tamanho"].'</p>';
+          echo       '<h3>'.$value["material"].'</h3>';
+          echo    '</div>';
+          echo  '<div class="input-resultado">';
+          echo         '<input type="submit" value="Veja Mais">';
+          echo  ' </div>';
+          echo  '</div>';
+          echo '</div>';
+          echo' </div>';
+          echo     '</div>';
+                ?>
                 <?php
             }
         }
@@ -48,4 +64,3 @@
         <?php
     }
 ?>
-</div> 
