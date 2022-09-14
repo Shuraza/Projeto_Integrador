@@ -82,5 +82,24 @@ select{
 .salvar{
     max-width: 350px;
     text-align: end;
+    display: flex;
+
+}
+
+
+
+.salvar input{
+   margin-right: 5px;
+}
+
+.tipo{
+    max-width: 350px;
+    text-align: end;
+
+}
+
+.salvar1{
+    display: flex;
+    margin-left: 105px;
 }
 

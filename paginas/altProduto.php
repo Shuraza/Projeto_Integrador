@@ -140,22 +140,32 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             <input type="file" name="image">
             <br>
             <div class="select">
-            <div class="tipo">
+                <div class="tipo">
 
-                <select name="tipo">
-                    <?php
-                    $sql1 = $pdo->prepare('SELECT * FROM CLASSE ');
-                    if ($sql1->execute()) {
-                        $info = $sql1->fetchAll(PDO::FETCH_ASSOC);
-                        foreach ($info as $key => $value) {
-                            echo '<option value=' . $value['idclasse'] . '>' . $value['Tipo'] . '</option>';
-                        }
-                    }
+                    <div class="salvar">
+                        <select name="tipo">
+                            <?php
+                            $sql1 = $pdo->prepare('SELECT * FROM CLASSE ');
+                            if ($sql1->execute()) {
+                                $info = $sql1->fetchAll(PDO::FETCH_ASSOC);
+                                foreach ($info as $key => $value) {
+                                    echo '<option value=' . $value['idclasse'] . '>' . $value['Tipo'] . '</option>';
+                                }
+                            }
 
-                    ?>
-        </div>
-        <input type="submit" value="Salvar" name="submit">
-        <span><?php echo $msgErro ?></span>
+                            ?>
+                        </select>
+                        <div class="salvar1">
+
+                            <input type="submit" value="Salvar" name="submit">
+
+                            <input type="submit" value="Voltar" onclick="parent.location='listProdutos.php'">
+                        </div>
+
+                    </div>
+                    <span><?php echo $msgErro ?></span>
+                </div>
+            </div>
     </form>
 </body>
 
