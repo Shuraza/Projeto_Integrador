@@ -42,12 +42,19 @@ if ($sql->execute(array($codigo))) {
         echo"</div>";
     }
 }
+
+
+$codigo2 = "";
+if (isset($_GET['codigo2'])){
+    $codigo2 = $_GET['codigo2'];
+} 
+
 $sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse LIKE "1" ');
 echo "<div class='mais-produtos'>";
 echo "<h2>MAIS PRODUTOS</h2>";
 echo "</div>";
 echo"<div class='outros-produtos'>";
-if ($sql->execute()) {
+if ($sql->execute(array($codigo2))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $value) {
         echo "<div class='container-outras-imgs'>";

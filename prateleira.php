@@ -11,7 +11,7 @@ if ($sql->execute()) {
     echo "<div>";
     $imagem = $value["imagem"];
     $codigo = $value['idProduto'];
-    echo '<a href="compras.php?codigo='.$codigo.'&codigo2="><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
+    echo '<a href="compras.php?codigo='.$codigo.'&codigo2=1"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
     echo '<h2>'.$value["nome"].'</h2>';
     echo "</div>";   
     }

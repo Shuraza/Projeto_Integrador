@@ -10,7 +10,8 @@ if ($sql->execute()) {
     foreach ($info as $key => $value) {
     echo "<div>";
     $imagem = $value["imagem"];
-    echo '<a href="compras2.php"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
+    $codigo = $value['idProduto'];
+    echo '<a href="compras2.php?codigo='.$codigo.'&codigo2=5"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
     echo '<h2>'.$value["nome"].'</h2>';
     echo "</div>";   
     }
