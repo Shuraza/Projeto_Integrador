@@ -49,7 +49,7 @@ if (isset($_GET['codigo2'])){
     $codigo2 = $_GET['codigo2'];
 } 
 
-$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse LIKE "1" ');
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse = ?');
 echo "<div class='mais-produtos'>";
 echo "<h2>MAIS PRODUTOS</h2>";
 echo "</div>";
