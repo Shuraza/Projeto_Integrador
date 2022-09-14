@@ -137,14 +137,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                             echo '<option value=' . $value['idclasse'] . '>' . $value['Tipo'] . '</option>';
                         }
                     }
-
                     ?>
                 </select>
             </div>
         </div>
         <div class="salvar">
+           
             <input type="submit" value="Salvar" name="submit">
+
+            <input type="submit" value="Voltar" onclick="parent.location='listProdutos.php'">
         </div>
+        
         <span><?php echo $msgErro ?></span>
     </form>
 </body>
