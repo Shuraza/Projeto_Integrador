@@ -2,6 +2,12 @@
 // include "../include/conexao.php";
 include "include/MySql.php";
 include "head.php";
+
+$codigo = "";
+if (isset($_GET['codigo'])){
+    $codigo = $_GET['codigo'];
+} 
+
 ?>
 
 <title>Resultados</title>
@@ -40,16 +46,16 @@ include "head.php";
                 echo  '<div class="resultado-produto">';
                 echo '<div class="img-resultado">';
                 $imagem = $value["imagem"];
-                echo '<a href="compras.php"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
+                echo '<img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '">';
                 echo '</div>';
                 echo '<div class="elementos-resultado">';
                 echo    '<div class="resultado-descricao">';
                 echo        '<h1>' . $value["nome"] . '</h1>';
-                echo       '<p>' . $value["tamanho"] . '</p>';
+                echo       '<p>' . $value["cor"] . '</p>';
                 echo       '<h3>' . $value["material"] . '</h3>';
                 echo    '</div>';
                 echo  '<div class="input-resultado">';
-                echo         '<input type="submit" value="Veja Mais">';
+                echo         '<a href="compras.php?codigo='.$codigo.'"><input type="submit" value="Veja Mais"></a>';
                 echo  ' </div>';
                 echo  '</div>';
                 echo '</div>';
