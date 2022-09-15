@@ -1,5 +1,6 @@
 <?php
-include "head.php";
+include "header_compras.php";
+
 include "include/MySql.php";
 
 $codigo = "";
