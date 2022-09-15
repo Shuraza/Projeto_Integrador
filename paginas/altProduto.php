@@ -158,8 +158,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <div class="salvar1">
 
                             <input type="submit" value="Salvar" name="submit">
-
-                            <input type="submit" value="Voltar" onclick="parent.location='listProdutos.php'">
+                            <a href="listProdutos.php">
+                            <input type="submit" value="Voltar"> 
+                        </a>
                         </div>
 
                     </div>
