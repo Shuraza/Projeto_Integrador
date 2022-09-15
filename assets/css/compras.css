@@ -67,17 +67,18 @@
     color: #011b0ccb;
 }
 
+
 input[type="submit" i] {
     background: #011b0c;
     height: 45px;
     border: none;
-    width: 300px;
+    width: 250px;
     color: white;
     border-radius: 25px;
     cursor: pointer;
     font-size: 14px;
-    box-shadow: 10px 10px 15px rgba(85, 85, 85, 0.397);
-}
+    box-shadow: 10px 10px 15px rgb(85 85 85 / 40%);
+    }
 
 .outros-produtos {
     padding: 40px 0px;
