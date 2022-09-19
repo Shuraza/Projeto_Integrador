@@ -2,6 +2,12 @@
 // include "../include/conexao.php";
 include "include/MySql.php";
 include "head.php";
+
+$codigo = "";
+if (isset($_GET['codigo'])){
+    $codigo = $_GET['codigo'];
+} 
+
 ?>
 
 <title>Resultados</title>
@@ -35,6 +41,7 @@ include "head.php";
             foreach ($info as $key => $value) {
             ?>
                 <?php
+
                echo      '<div class="titulos1">';
                echo '<div class="container-resultado">';
                echo  '<div class="resultado-produto">';
@@ -57,6 +64,7 @@ include "head.php";
                echo '</div>';
                echo  '</div>';
                echo '</div>';
+
                 ?>
         <?php
             }

@@ -1,11 +1,14 @@
 <?php
 include "head2.php";
 include "../include/MySql.php";
+$codigo2 = "";
+$codigo = "";
+if (isset($_GET['codigo'])){
+    $codigo = $_GET['codigo'];
+} 
 
-
-
-$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idProduto ="14" ');
-if ($sql->execute()) {
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idProduto = ? ');
+if ($sql->execute(array($codigo))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $value) {
 
@@ -38,20 +41,28 @@ if ($sql->execute()) {
         echo"</div>";
     }
 }
-$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse LIKE "1" ');
+$codigo2 = "";
+if (isset($_GET['codigo2'])){
+    $codigo2 = $_GET['codigo2'];
+} 
+echo $codigo2;
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse = ? ');
 echo "<div class='mais-produtos'>";
 echo "<h2>MAIS PRODUTOS</h2>";
 echo "</div>";
 echo"<div class='outros-produtos'>";
-if ($sql->execute()) {
+if ($sql->execute(array($codigo2))) {
+   
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $value) {
+      
         echo "<div class='container-outras-imgs'>";
         $imagem = $value["imagem"];
-        echo '<img src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '">';
+        echo ' <img src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '">';
         echo  "</div>";
         
     }
+ 
 }
 echo"</div>";
 

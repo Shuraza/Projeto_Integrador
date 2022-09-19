@@ -1,5 +1,6 @@
 <?php
-include "head.php";
+include "header_compras.php";
+
 include "include/MySql.php";
 
 $codigo = "";
@@ -42,12 +43,19 @@ if ($sql->execute(array($codigo))) {
         echo"</div>";
     }
 }
-$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse LIKE "1" ');
+
+
+$codigo2 = "";
+if (isset($_GET['codigo2'])){
+    $codigo2 = $_GET['codigo2'];
+} 
+
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse = ?');
 echo "<div class='mais-produtos'>";
 echo "<h2>MAIS PRODUTOS</h2>";
 echo "</div>";
 echo"<div class='outros-produtos'>";
-if ($sql->execute()) {
+if ($sql->execute(array($codigo2))) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $value) {
         echo "<div class='container-outras-imgs'>";
