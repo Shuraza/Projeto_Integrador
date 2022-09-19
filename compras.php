@@ -60,7 +60,9 @@ if ($sql->execute(array($codigo2))) {
     foreach ($info as $key => $value) {
         echo "<div class='container-outras-imgs'>";
         $imagem = $value["imagem"];
-        echo '<img src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '">';
+        $codigo= $value['idProduto'];
+        $codigo2= $value['idclasse'];
+        echo '<a href = "compras.php?codigo='.$codigo.'&codigo2='.$codigo2.'"><img src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
         echo  "</div>";
         
     }
