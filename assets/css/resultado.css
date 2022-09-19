@@ -19,6 +19,16 @@
     margin-bottom: 50px;
 }
 
+input[type="submit" i] {
+    background: #011b0c;
+    height: 45px;
+    border: none;
+    width: 100px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 10px 10px 15px rgb(85 85 85 / 40%);}
 
 .img-resultado img {
     width: 300px;
@@ -30,7 +40,6 @@
 
 .input-resultado {
     display: flex;
-    align-items: center;
 }
 
 .elementos-resultado {

@@ -35,26 +35,28 @@ include "head.php";
             foreach ($info as $key => $value) {
             ?>
                 <?php
-                echo      '<div class="titulos1">';
-                echo '<div class="container-resultado">';
-                echo  '<div class="resultado-produto">';
-                echo '<div class="img-resultado">';
-                $imagem = $value["imagem"];
-                echo '<a href="compras.php"><img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
-                echo '</div>';
-                echo '<div class="elementos-resultado">';
-                echo    '<div class="resultado-descricao">';
-                echo        '<h1>' . $value["nome"] . '</h1>';
-                echo       '<p>' . $value["tamanho"] . '</p>';
-                echo       '<h3>' . $value["material"] . '</h3>';
-                echo    '</div>';
-                echo  '<div class="input-resultado">';
-                echo         '<input type="submit" value="Veja Mais">';
-                echo  ' </div>';
-                echo  '</div>';
-                echo '</div>';
-                echo  '</div>';
-                echo '</div>';
+               echo      '<div class="titulos1">';
+               echo '<div class="container-resultado">';
+               echo  '<div class="resultado-produto">';
+               echo '<div class="img-resultado">';
+               $imagem = $value["imagem"];
+               $codigo = $value['idProduto'];
+               $codigo2 = $value['idclasse'];
+               echo '<img style= "width:300px;"src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '">';
+               echo '</div>';
+               echo '<div class="elementos-resultado">';
+               echo    '<div class="resultado-descricao">';
+               echo        '<h1>' . $value["nome"] . '</h1>';
+               echo       '<p>' . $value["cor"] . '</p>';
+               echo       '<h3>' . $value["material"] . '</h3>';
+               echo    '</div>';
+               echo  '<div class="input-resultado">';
+               echo         '<a href="compras.php?codigo='.$codigo.'&codigo2='.$codigo2.'"><input type="submit" value="Veja Mais"></a>';
+               echo  ' </div>';
+               echo  '</div>';
+               echo '</div>';
+               echo  '</div>';
+               echo '</div>';
                 ?>
         <?php
             }
