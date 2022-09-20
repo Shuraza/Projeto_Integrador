@@ -1,7 +1,8 @@
-<?php
-include "head2.php";
+ <?php
+include "header_compras2.php";
+
 include "../include/MySql.php";
-$codigo2 = "";
+
 $codigo = "";
 if (isset($_GET['codigo'])){
     $codigo = $_GET['codigo'];
@@ -41,29 +42,31 @@ if ($sql->execute(array($codigo))) {
         echo"</div>";
     }
 }
+
+
 $codigo2 = "";
 if (isset($_GET['codigo2'])){
     $codigo2 = $_GET['codigo2'];
 } 
-echo $codigo2;
-$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse = ? ');
+
+$sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse = ?');
 echo "<div class='mais-produtos'>";
 echo "<h2>MAIS PRODUTOS</h2>";
 echo "</div>";
 echo"<div class='outros-produtos'>";
 if ($sql->execute(array($codigo2))) {
-   
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     foreach ($info as $key => $value) {
-      
         echo "<div class='container-outras-imgs'>";
         $imagem = $value["imagem"];
-        echo ' <img src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '">';
+        $codigo= $value['idProduto'];
+        $codigo2= $value['idclasse'];
+        echo '<a href = "compras2.php?codigo='.$codigo.'&codigo2='.$codigo2.'"><img src="data:image/jpg;charset=utf8;base64,' . base64_encode($imagem) . '"></a>';
         echo  "</div>";
         
     }
- 
 }
+
 echo"</div>";
 
 

@@ -67,6 +67,7 @@ if ($sql->execute(array($codigo2))) {
         
     }
 }
+
 echo"</div>";
 
 
