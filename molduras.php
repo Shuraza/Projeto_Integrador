@@ -2,7 +2,7 @@
 include "head.php";
 include "include/MySql.php";
 
-echo "<h1 class='espacos-h1'>MOLDURAS</h1>";
+echo "<h1 class='espacos-h1'>MESAS</h1>";
 echo "<section class='espacos-class'>";
 $sql = $pdo->prepare('SELECT * FROM PRODUTOS WHERE idclasse LIKE "7" ');
 if ($sql->execute()) {

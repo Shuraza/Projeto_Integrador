@@ -88,8 +88,8 @@ include "head.php";
         <a href="escrivaninha.php"><img src="assets/img/escrivaninha.png"></a>
     </div>
     <div class="titulos">
-        <h2>Molduras</h2>
-        <a href="molduras.php"><img src="assets/img/moldura.png"></a>
+        <h2>Mesas</h2>
+        <a href="molduras.php"><img src="assets/img/mesa-jantar.jpg"></a>
     </div>
     <div class="titulos">
         <h2>Cabideiros</h2>
